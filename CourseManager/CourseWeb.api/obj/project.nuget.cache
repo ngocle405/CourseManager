@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1A0qhWIdDUGDPYSbNdrmc8zJDfFVDzXgaJHspvOTTX/66sSCzIy4hsm1iKj0yjHJeVwQLp3Elcss7w1ptAetrg==",
+  "dgSpecHash": "Xyj2KLAMIGPzJ9AjzQTW1pCQeTjO9edzZ935cDTP/RS1bv2T/JvKhlkMJVMgywbbqHW73YtiO0rJkHgZ+SbM8w==",
   "success": true,
-  "projectFilePath": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.api\\CourseWeb.api.csproj",
+  "projectFilePath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.api\\CourseWeb.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\epplus\\5.8.9\\epplus.5.8.9.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

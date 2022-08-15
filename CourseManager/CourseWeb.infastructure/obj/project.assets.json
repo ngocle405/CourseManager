@@ -7016,11 +7016,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
+      "projectUniqueName": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
       "projectName": "CourseWeb.infastructure",
-      "projectPath": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
+      "projectPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.infastructure\\obj\\",
+      "outputPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7040,8 +7040,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj": {
-              "projectPath": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj"
+            "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj": {
+              "projectPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj"
             }
           }
         }

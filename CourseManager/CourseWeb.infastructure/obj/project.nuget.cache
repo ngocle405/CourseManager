@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ctLQGFSrZSuXhXQXbPFHX3WcByp0N7KSE9siz3G0Ka2Z7wr6vYYSNwxlfyUQRWRd4zddb3VLR4em68dN9EjwWA==",
+  "dgSpecHash": "zvb1d5D6dqTa8n3cLXNuizt0OpUt/bK0dnMXn2QjGl4RnRxMglKAX9pSSs/LEk7XiEXc637d4CBb6t+33lvmYQ==",
   "success": true,
-  "projectFilePath": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
+  "projectFilePath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\epplus\\5.8.9\\epplus.5.8.9.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

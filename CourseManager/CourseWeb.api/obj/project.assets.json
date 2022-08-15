@@ -7122,11 +7122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.api\\CourseWeb.api.csproj",
+      "projectUniqueName": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.api\\CourseWeb.api.csproj",
       "projectName": "CourseWeb.api",
-      "projectPath": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.api\\CourseWeb.api.csproj",
+      "projectPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.api\\CourseWeb.api.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.api\\obj\\",
+      "outputPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7146,11 +7146,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj": {
-              "projectPath": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj"
+            "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj": {
+              "projectPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj"
             },
-            "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj": {
-              "projectPath": "D:\\đồ án tốt nghiệp\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj"
+            "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj": {
+              "projectPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj"
             }
           }
         }

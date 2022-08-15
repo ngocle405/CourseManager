@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = CourseWeb.api
-build_property.ProjectDir = D:\đồ án tốt nghiệp\CourseManager\CourseWeb.api\
+build_property.ProjectDir = D:\đồ án tốt nghiệp\Course-manager\CourseManager\CourseWeb.api\
