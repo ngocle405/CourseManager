@@ -41,17 +41,9 @@ namespace CourseWeb.infastructure.Repositories
                 Say=request.Say,
                 CreateBy = "admin",
                 CreateDate = DateTime.Now,
+                Image=request.Image
             };
-            if (request.Image != null)
-            {
-                var arrData = request.Image.Split(';');
-                if (arrData.Length == 3)
-                {
-                    var savePath = $"{arrData[0]}";
-                    teacher.Image = $"{savePath}";
-                    _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
-                }
-            }
+            
             _courseManagerContext.Add(teacher);
             var res = _courseManagerContext.SaveChanges();
             return res;
@@ -159,16 +151,7 @@ namespace CourseWeb.infastructure.Repositories
             teacher.Say = request.Say;
             teacher.UpdateDate = DateTime.Now;
 
-            if (request.Image != null)
-            {
-                var arrData = request.Image.Split(';');
-                if (arrData.Length == 3)
-                {
-                    var savePath = $"{arrData[0]}";
-                    teacher.Image = $"{savePath}";
-                    _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
-                }
-            }
+            teacher.Image = request.Image;
             var res = _courseManagerContext.SaveChanges();
             return res;
 

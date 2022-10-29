@@ -1,9 +1,11 @@
 ﻿using CourseWeb.Core.Interfaces.Repositories;
 using CourseWeb.Core.Interfaces.Services;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,10 +19,12 @@ namespace CourseWeb.Api.AdminCp
     {
         private readonly ICourseService _courseService;
         private ICourseRepository _courseRepository;
-        public CoursesController(ICourseService courseService,ICourseRepository courseRepository)
+        private readonly IWebHostEnvironment _env;
+        public CoursesController(ICourseService courseService,ICourseRepository courseRepository, IWebHostEnvironment env)
         {
             _courseRepository = courseRepository;
             _courseService = courseService;
+            _env = env;
         }
         // GET: api/<CoursesController>
         [HttpGet]
@@ -61,6 +65,20 @@ namespace CourseWeb.Api.AdminCp
         {
             var res = _courseService.Paging(searchName, searchCode, pageSize, pageIndex, status, courseCategoryId,teacherId);
             return Ok(res);
+        }
+        [HttpPost("UploadPhotos")]
+        public IActionResult UploadPhotos()
+        {
+            var httpRequest = Request.Form;
+            var posted = httpRequest.Files[0];
+            string filename = posted.FileName.ToString();
+            var physicalPath = _env.ContentRootPath + "/Upload/Files/" + Path.GetFileName(filename);
+
+            using (var stream = new FileStream(physicalPath, FileMode.Create))
+            {
+                posted.CopyTo(stream);
+            }
+            return new JsonResult(filename);
         }
     }
 }

@@ -31,28 +31,29 @@ namespace CourseWeb.Infastructure.Repositories
         {
             New obj = new New()
             {
-                NewId=Guid.NewGuid(),
+                NewId = Guid.NewGuid(),
                 Title = request.Title,
                 Description = request.Description,
                 Detail = request.Detail,
                 NewCategoryId = request.NewCategoryId,
-              
+
                 CreateDate = DateTime.Now,
                 CreateBy = "Admin",
                 Status = request.Status,
                 Type = request.Type,
+                Image = request.Image
             };
 
-            if (request.Image != null)
-            {
-                var arrData = request.Image.Split(';');
-                if (arrData.Length == 3)
-                {
-                    var savePath = $"{arrData[0]}";
-                    obj.Image = $"{savePath}";
-                    _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
-                }
-            }
+            //if (request.Image != null)
+            //{
+            //    var arrData = request.Image.Split(';');
+            //    if (arrData.Length == 3)
+            //    {
+            //        var savePath = $"{arrData[0]}";
+            //        obj.Image = $"{savePath}";
+            //        _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
+            //    }
+            //}
             _courseManagerContext.News.Add(obj);
             var res = _courseManagerContext.SaveChanges();
             return res;
@@ -206,16 +207,7 @@ namespace CourseWeb.Infastructure.Repositories
             obj.UpdateBy = "Admin 1";
             obj.Status = request.Status;
             obj.Type = request.Type;
-            if (request.Image != null)
-            {
-                var arrData = request.Image.Split(';');
-                if (arrData.Length == 3)
-                {
-                    var savePath = $"{arrData[0]}";
-                    obj.Image = $"{savePath}";
-                    _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
-                }
-            }
+            obj.Image = request.Image;
             var res = _courseManagerContext.SaveChanges();
             return res;
         }

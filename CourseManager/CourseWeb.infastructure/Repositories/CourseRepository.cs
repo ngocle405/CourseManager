@@ -41,18 +41,10 @@ namespace CourseWeb.Infastructure.Repositories
                 EndDate = request.EndDate,
                 Status = request.Status,
                 CreateDate = DateTime.Now,
-                CreateBy = "admin"
+                CreateBy = "admin",
+                
             };
-            if (request.Image != null)
-            {
-                var arrData = request.Image.Split(';');
-                if (arrData.Length == 3)
-                {
-                    var savePath = $"{arrData[0]}";
-                    course.Image = $"{savePath}";
-                    _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
-                }
-            }
+          
             _courseManagerContext.Courses.Add(course);
             var res = _courseManagerContext.SaveChanges();
             return res;
@@ -204,16 +196,8 @@ namespace CourseWeb.Infastructure.Repositories
             course.Status = request.Status;
             course.UpdateDate = DateTime.Now;
             course.UpdateBy = "admin";
-            if (request.Image != null)
-            {
-                var arrData = request.Image.Split(';');
-                if (arrData.Length == 3)
-                {
-                    var savePath = $"{arrData[0]}";
-                    course.Image = $"{savePath}";
-                    _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
-                }
-            }
+            course.Image = request.Image;
+           
             var res = _courseManagerContext.SaveChanges();
             return res;
         }

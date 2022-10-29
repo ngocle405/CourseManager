@@ -169,14 +169,8 @@ namespace CourseWeb.Infastructure.Repositories
             
         }
 
-        IEnumerable<NewCategory> INewCategoryRepository.GetAll()
-        {
-            throw new NotImplementedException();
-        }
+ 
 
-        NewCategory INewCategoryRepository.GetById(Guid NewCategoryId)
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }

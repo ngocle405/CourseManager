@@ -1,6 +1,7 @@
 ﻿
 using CourseWeb.Core.Interfaces.Services;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -18,9 +19,11 @@ namespace CourseWeb.Api.AdminCp
     public class NewsController : ControllerBase
     {
         private readonly INewService _newService;
-        public NewsController(INewService newService)
+        private readonly IWebHostEnvironment _env;
+        public NewsController(INewService newService,   IWebHostEnvironment env)
         {
             _newService = newService;
+            _env = env;
         }
         [HttpPost]
        
@@ -59,6 +62,22 @@ namespace CourseWeb.Api.AdminCp
         {
             var res = _newService.ExportExcel();
             return File(res, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+        }
+        [HttpPost("UploadPhotos")]
+        public IActionResult UploadPhotos()
+        {
+
+            var httpRequest = Request.Form;
+            var posted = httpRequest.Files[0];
+            string filename = posted.FileName.ToString();
+            var physicalPath = _env.ContentRootPath + "/Upload/Files/" + Path.GetFileName(filename);
+
+            using (var stream = new FileStream(physicalPath, FileMode.Create))
+            {
+                posted.CopyTo(stream);
+            }
+            return new JsonResult (filename);
+
         }
     }
 }

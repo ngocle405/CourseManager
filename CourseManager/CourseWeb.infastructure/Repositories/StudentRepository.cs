@@ -51,18 +51,20 @@ namespace CourseWeb.infastructure.Repositories
                 Level = request.Level,
                 ClassId = request.ClassId,
                 WorkLocation = request.WorkLocation,
-                CreateBy = "admin"
+                CreateBy = "admin",
+                Image=request.Image
             };
-            if (request.Image != null)
-            {
-                var arrData = request.Image.Split(';');
-                if (arrData.Length == 3)
-                {
-                    var savePath = $"{arrData[0]}";
-                    obj.Image = $"{savePath}";
-                    _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
-                }
-            }
+            
+            //if (request.Image != null)
+            //{
+            //    var arrData = request.Image.Split(';');
+            //    if (arrData.Length == 3)
+            //    {
+            //        var savePath = $"{arrData[0]}";
+            //        obj.Image = $"{savePath}";
+            //        _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
+            //    }
+            //}
             _courseManagerContext.Students.Add(obj);
             var res = _courseManagerContext.SaveChanges();
             return res;
@@ -213,16 +215,8 @@ namespace CourseWeb.infastructure.Repositories
             obj.Status = request.Status;
             obj.UpdateDate = DateTime.Now;
             obj.Description = request.Description;
-            if (request.Image != null)
-            {
-                var arrData = request.Image.Split(';');
-                if (arrData.Length == 3)
-                {
-                    var savePath = $"{arrData[0]}";
-                    obj.Image = $"{savePath}";
-                    _storageRepository.SaveFileFromBase64String(savePath, arrData[2]);
-                }
-            }
+            obj.Image = request.Image;
+            
             var res = _courseManagerContext.SaveChanges();
             return res;
         }
