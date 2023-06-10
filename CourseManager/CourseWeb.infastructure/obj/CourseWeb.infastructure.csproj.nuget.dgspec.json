@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj": {}
+    "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj": {}
   },
   "projects": {
-    "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj": {
+    "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj",
+        "projectUniqueName": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj",
         "projectName": "CourseWeb.Core",
-        "projectPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\obj\\",
+        "projectPath": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj",
+        "packagesPath": "C:\\Users\\ngocl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngocl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +69,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -81,24 +79,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj": {
+    "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
+        "projectUniqueName": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
         "projectName": "CourseWeb.infastructure",
-        "projectPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.infastructure\\obj\\",
+        "projectPath": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.infastructure\\CourseWeb.infastructure.csproj",
+        "packagesPath": "C:\\Users\\ngocl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.infastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngocl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -112,8 +107,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj": {
-                "projectPath": "D:\\đồ án tốt nghiệp\\Course-manager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj"
+              "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj": {
+                "projectPath": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj"
               }
             }
           }
@@ -153,7 +148,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -162,7 +158,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

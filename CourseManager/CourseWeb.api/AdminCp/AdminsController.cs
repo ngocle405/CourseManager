@@ -30,7 +30,7 @@ namespace CourseWeb.api.AdminCp
                     useMsg = "Tên đăng nhập không để trống",
                     Code = 400,
                 };
-                return Ok( msg);
+                return Ok(msg);
             }
             if (string.IsNullOrEmpty(request.Password))
             {
@@ -40,10 +40,10 @@ namespace CourseWeb.api.AdminCp
                     useMsg = "Mật khẩu không để trống",
                     Code = 400,
                 };
-                return Ok (msg);
+                return Ok(msg);
             }
             var admin = _courseManagerContext.Admins.SingleOrDefault(x => x.UserName == request.UserName && x.Password == request.Password);
-            if(admin != null)
+            if (admin != null)
             {
                 return Ok(admin);
             }
@@ -56,7 +56,33 @@ namespace CourseWeb.api.AdminCp
                 };
                 return Ok(msg);
             }
-          
+
         }
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(_courseManagerContext.Admins);
+        }
+
+
+
+        // POST api/<ClassesController>
+        [HttpPost]
+        public IActionResult Post(Admin request)
+        {
+            var res = _courseManagerContext.Admins.Add(request);
+            _courseManagerContext.SaveChanges();
+            return StatusCode(201, res);
+        }
+
+        // PUT api/<ClassesController>/5
+        [HttpPut("{Id}")]
+        public IActionResult Put(Admin request)
+        {
+            var res = _courseManagerContext.Admins.Update(request);
+            _courseManagerContext.SaveChanges();
+            return Ok(res);
+        }
+
     }
 }
