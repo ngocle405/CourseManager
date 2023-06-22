@@ -76,6 +76,12 @@ namespace CourseWeb.api.Controllers
             var res = _newService.GetById(newId);
             return Ok(res);
         }
+        [HttpGet("search")]
+        public IActionResult Paging(string searchName, string searchCode, int pageSize, int pageIndex, bool? status, Guid? courseCategoryId, Guid? teacherId)
+        {
+            var res = _courseService.Paging(searchName, searchCode, pageSize, pageIndex, status, courseCategoryId, teacherId);
+            return Ok(res);
+        }
 
     }
 }

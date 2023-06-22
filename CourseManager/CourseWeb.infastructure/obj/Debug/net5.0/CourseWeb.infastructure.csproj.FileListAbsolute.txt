@@ -52,3 +52,21 @@ C:\Users\ngocl\Documents\Visual Studio 2022\Project\CourseManager\CourseManager\
 C:\Users\ngocl\Documents\Visual Studio 2022\Project\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.pdb
 C:\Users\ngocl\Documents\Visual Studio 2022\Project\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.genruntimeconfig.cache
 C:\Users\ngocl\Documents\Visual Studio 2022\Project\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\ref\CourseWeb.infastructure.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\bin\Debug\net5.0\CourseWeb.infastructure.deps.json
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\bin\Debug\net5.0\CourseWeb.infastructure.runtimeconfig.json
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\bin\Debug\net5.0\CourseWeb.infastructure.runtimeconfig.dev.json
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\bin\Debug\net5.0\CourseWeb.infastructure.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\bin\Debug\net5.0\CourseWeb.infastructure.pdb
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\bin\Debug\net5.0\CourseWeb.Core.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\bin\Debug\net5.0\CourseWeb.Core.pdb
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.csproj.AssemblyReference.cache
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.AssemblyInfoInputs.cache
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.AssemblyInfo.cs
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.csproj.CoreCompileInputs.cache
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.csproj.CopyComplete
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\refint\CourseWeb.infastructure.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.pdb
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\CourseWeb.infastructure.genruntimeconfig.cache
+D:\visual studio\CourseManager\CourseManager\CourseWeb.infastructure\obj\Debug\net5.0\ref\CourseWeb.infastructure.dll

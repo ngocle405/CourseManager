@@ -6940,19 +6940,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ngocl\\.nuget\\packages\\": {}
+    "C:\\Users\\DreamStore\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj",
+      "projectUniqueName": "D:\\visual studio\\CourseManager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj",
       "projectName": "CourseWeb.Core",
-      "projectPath": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj",
-      "packagesPath": "C:\\Users\\ngocl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ngocl\\Documents\\Visual Studio 2022\\Project\\CourseManager\\CourseManager\\CourseWeb.Core\\obj\\",
+      "projectPath": "D:\\visual studio\\CourseManager\\CourseManager\\CourseWeb.Core\\CourseWeb.Core.csproj",
+      "packagesPath": "C:\\Users\\DreamStore\\.nuget\\packages\\",
+      "outputPath": "D:\\visual studio\\CourseManager\\CourseManager\\CourseWeb.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ngocl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DreamStore\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7017,7 +7017,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

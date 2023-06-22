@@ -43,3 +43,18 @@ C:\Users\ngocl\Documents\Visual Studio 2022\Project\CourseManager\CourseManager\
 C:\Users\ngocl\Documents\Visual Studio 2022\Project\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.pdb
 C:\Users\ngocl\Documents\Visual Studio 2022\Project\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.genruntimeconfig.cache
 C:\Users\ngocl\Documents\Visual Studio 2022\Project\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\ref\CourseWeb.Core.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\bin\Debug\net5.0\CourseWeb.Core.deps.json
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\bin\Debug\net5.0\CourseWeb.Core.runtimeconfig.json
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\bin\Debug\net5.0\CourseWeb.Core.runtimeconfig.dev.json
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\bin\Debug\net5.0\CourseWeb.Core.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\bin\Debug\net5.0\CourseWeb.Core.pdb
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.csproj.AssemblyReference.cache
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.AssemblyInfoInputs.cache
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.AssemblyInfo.cs
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.csproj.CoreCompileInputs.cache
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\refint\CourseWeb.Core.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.pdb
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\CourseWeb.Core.genruntimeconfig.cache
+D:\visual studio\CourseManager\CourseManager\CourseWeb.Core\obj\Debug\net5.0\ref\CourseWeb.Core.dll

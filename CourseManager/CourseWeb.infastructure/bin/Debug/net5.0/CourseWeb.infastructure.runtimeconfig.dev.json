@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\ngocl\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ngocl\\.nuget\\packages"
+      "C:\\Users\\DreamStore\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\DreamStore\\.nuget\\packages"
     ]
   }
 }
