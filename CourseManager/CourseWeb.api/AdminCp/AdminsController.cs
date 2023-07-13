@@ -85,7 +85,7 @@ namespace CourseWeb.api.AdminCp
             return Ok(res);
         }
         [HttpDelete("range")]
-        public IActionResult DeleteRange(List<Guid> request)
+        public IActionResult DeleteRange(List<Guid?> request)
         {
             var entitiesToDelete = _courseManagerContext.Admins.Where(e => request.Contains(e.Id));
             _courseManagerContext.Admins.RemoveRange(entitiesToDelete);
@@ -103,5 +103,21 @@ namespace CourseWeb.api.AdminCp
             _courseManagerContext.SaveChanges();
             return StatusCode(201,request);
         }
+        [HttpPut("range")]
+        public IActionResult PutRange(List<Admin> request)
+        {
+            foreach (var item in request)
+            {
+                if (item.Id == null)
+                {
+                   item.Id = Guid.NewGuid();
+                }
+            }
+            //var entitiesToDelete = _courseManagerContext.Admins.Where(e => request.);
+            _courseManagerContext.Admins.UpdateRange(request);
+            _courseManagerContext.SaveChanges();
+            return Ok(request);
+        }
+
     }
 }
