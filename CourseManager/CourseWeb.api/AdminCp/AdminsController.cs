@@ -70,9 +70,10 @@ namespace CourseWeb.api.AdminCp
         [HttpPost]
         public IActionResult Post(Admin request)
         {
+            request.Id =  Guid.NewGuid();
             var res = _courseManagerContext.Admins.Add(request);
             _courseManagerContext.SaveChanges();
-            return StatusCode(201, res);
+            return Ok(res);
         }
 
         // PUT api/<ClassesController>/5
@@ -83,6 +84,24 @@ namespace CourseWeb.api.AdminCp
             _courseManagerContext.SaveChanges();
             return Ok(res);
         }
-
+        [HttpDelete("range")]
+        public IActionResult DeleteRange(List<Guid> request)
+        {
+            var entitiesToDelete = _courseManagerContext.Admins.Where(e => request.Contains(e.Id));
+            _courseManagerContext.Admins.RemoveRange(entitiesToDelete);
+            _courseManagerContext.SaveChanges();
+            return Ok(entitiesToDelete);
+        }
+        [HttpPost("range")]
+        public IActionResult PostRange(List<Admin> request)
+        {
+            foreach (var item in request)
+            {
+                item.Id = Guid.NewGuid();   
+            }
+            _courseManagerContext.Admins.AddRange(request);
+            _courseManagerContext.SaveChanges();
+            return StatusCode(201,request);
+        }
     }
 }
