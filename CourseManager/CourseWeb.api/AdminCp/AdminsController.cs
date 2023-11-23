@@ -1,11 +1,17 @@
 ﻿using CourseWeb.Core;
 using CourseWeb.Core.Entities;
+using CourseWeb.Core.Models;
 using CourseWeb.Core.Request;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace CourseWeb.api.AdminCp
@@ -15,9 +21,11 @@ namespace CourseWeb.api.AdminCp
     public class AdminsController : ControllerBase
     {
         private CourseManagerContext _courseManagerContext;
-        public AdminsController(CourseManagerContext courseManagerContext)
+        private readonly AppSetting _appSettings;
+        public AdminsController(CourseManagerContext courseManagerContext, IOptionsMonitor<AppSetting> optionsMonitor)
         {
             _courseManagerContext = courseManagerContext;
+            _appSettings = optionsMonitor.CurrentValue;
         }
         [HttpPost("Login")]
         public IActionResult Login(AdminRequest request)
@@ -45,7 +53,19 @@ namespace CourseWeb.api.AdminCp
             var admin = _courseManagerContext.Admins.SingleOrDefault(x => x.UserName == request.UserName && x.Password == request.Password);
             if (admin != null)
             {
-                return Ok(admin);
+                var res = new
+                {
+                    Code = 1000,
+                    Msg = "Success",
+                    Data = new
+                    {
+                        User = admin.UserName,
+                        Permisions = new {},
+                        AccessToken = GenerateToken(admin),
+
+                    },
+                };
+                return Ok(res); 
             }
             else
             {
@@ -63,11 +83,35 @@ namespace CourseWeb.api.AdminCp
         {
             return Ok(_courseManagerContext.Admins);
         }
+        private string GenerateToken(Admin nguoiDung)
+        {
+            var jwtTokenHandler = new JwtSecurityTokenHandler();
+
+            var secretKeyBytes = Encoding.UTF8.GetBytes(_appSettings.SecretKey);
+
+            var tokenDescription = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[] {
+                    new Claim("UserName", nguoiDung.UserName),
+                    new Claim("Id", nguoiDung.Id.ToString()),
+
+                    //roles
+
+                    new Claim("TokenId", Guid.NewGuid().ToString())
+                }),
+                Expires = DateTime.UtcNow.AddMinutes(1),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secretKeyBytes), SecurityAlgorithms.HmacSha512Signature)
+            };
+
+            var token = jwtTokenHandler.CreateToken(tokenDescription);
+
+            return jwtTokenHandler.WriteToken(token);
+        
+    }
 
 
-
-        // POST api/<ClassesController>
-        [HttpPost]
+    // POST api/<ClassesController>
+    [HttpPost]
         public IActionResult Post(Admin request)
         {
             request.Id =  Guid.NewGuid();

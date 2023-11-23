@@ -276,3 +276,4 @@ D:\visual studio\CourseManager\CourseManager\CourseWeb.api\obj\Debug\net5.0\refi
 D:\visual studio\CourseManager\CourseManager\CourseWeb.api\obj\Debug\net5.0\CourseWeb.api.pdb
 D:\visual studio\CourseManager\CourseManager\CourseWeb.api\obj\Debug\net5.0\CourseWeb.api.genruntimeconfig.cache
 D:\visual studio\CourseManager\CourseManager\CourseWeb.api\obj\Debug\net5.0\ref\CourseWeb.api.dll
+D:\visual studio\CourseManager\CourseManager\CourseWeb.api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
