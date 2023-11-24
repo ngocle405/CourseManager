@@ -1,6 +1,7 @@
 ﻿using CourseWeb.Core.Interfaces.Repositories;
 using CourseWeb.Core.Interfaces.Services;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -37,6 +38,7 @@ namespace CourseWeb.api.AdminCp
 
         // GET api/<TeachersController>/5
         [HttpGet("{teacherId}")]
+        [Authorize]
         public IActionResult Get(Guid teacherId)
         {
             var res = _teacherService.GetById(teacherId);
@@ -45,6 +47,7 @@ namespace CourseWeb.api.AdminCp
 
         // POST api/<TeachersController>
         [HttpPost]
+        [Authorize]
         public IActionResult Post([FromBody] TeacherRequest request)
         {
            
@@ -54,6 +57,7 @@ namespace CourseWeb.api.AdminCp
 
         // PUT api/<TeachersController>/5
         [HttpPut("{teacherId}")]
+        [Authorize]
         public IActionResult Put(Guid teacherId, [FromBody] TeacherRequest request)
         {
             var res = _teacherService.Update(teacherId, request);
@@ -62,18 +66,21 @@ namespace CourseWeb.api.AdminCp
 
         // DELETE api/<TeachersController>/5
         [HttpDelete("{teacherId}")]
+        [Authorize]
         public IActionResult Delete(Guid teacherId)
         {
             var res = _teacherService.Delete(teacherId);
             return Ok(res);
         }
         [HttpGet("Paging")]
+        [Authorize]
         public IActionResult Paging(string searchName, string searchCode, int pageSize, int pageIndex, bool? status)
         {
             var res = _teacherService.Paging(searchName, searchCode, pageSize, pageIndex, status);
             return Ok(res);
         }
         [HttpPost("UploadPhotos")]
+        [Authorize]
         public IActionResult UploadPhotos()
         {
             var httpRequest = Request.Form;

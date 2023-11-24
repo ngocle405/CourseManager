@@ -1,6 +1,7 @@
 ﻿using CourseWeb.Core.Interfaces.Repositories;
 using CourseWeb.Core.Interfaces.Services;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -35,6 +36,7 @@ namespace CourseWeb.api.AdminCp
 
         // GET api/<StudentsController>/5
         [HttpGet("{studentId}")]
+  
         public IActionResult Get(Guid studentId)
         {
             return Ok(_studentService.GetById(studentId));
@@ -42,6 +44,7 @@ namespace CourseWeb.api.AdminCp
 
         // POST api/<StudentsController>
         [HttpPost]
+        [Authorize]
         public IActionResult Post(StudentRequest request)
         {
             return StatusCode(201,_studentService.Create(request));
@@ -53,11 +56,13 @@ namespace CourseWeb.api.AdminCp
         }
         // PUT api/<StudentsController>/5
         [HttpPut("{studentId}")]
+        [Authorize]
         public IActionResult Put(Guid studentId,  StudentRequest request)
         {
             return Ok(_studentService.Update(studentId,request));
         }
         [HttpPut("updateStatus/{studentId}")]
+        [Authorize]
         public IActionResult UpdateStatus(Guid studentId, StudentRequest request)
         {
             return Ok(_studentService.ChangeStatus(studentId, request));
@@ -65,16 +70,19 @@ namespace CourseWeb.api.AdminCp
 
         // DELETE api/<StudentsController>/5
         [HttpDelete("{studentId}")]
+        [Authorize]
         public IActionResult Delete(Guid studentId)
         {
             return Ok(_studentService.Delete(studentId));
         }
         [HttpGet("Paging")]
+        [Authorize]
         public IActionResult Paging(string searchName, string searchCode, int pageSize, int pageIndex, bool? status, Guid? courseId,Guid? classId)
         {
             return Ok(_studentService.Paging(searchName, searchCode, pageSize, pageIndex, status, courseId,classId));
         }
         [HttpPost("UploadPhotos")]
+        [Authorize]
         public IActionResult UploadPhotos()
         {
             var httpRequest = Request.Form;

@@ -1,5 +1,6 @@
 ﻿using CourseWeb.Core.Interfaces.Services;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,7 @@ namespace CourseWeb.api.AdminCp
 
         // GET api/<ConfigSystemsController>/5
         [HttpGet("{configId}")]
+        [Authorize]
         public IActionResult Get(Guid configId)
         {
             return Ok(_configSystemService.GetById(configId));
@@ -35,6 +37,7 @@ namespace CourseWeb.api.AdminCp
 
         // POST api/<ConfigSystemsController>
         [HttpPost]
+        [Authorize]
         public IActionResult Post([FromBody] ConfigSystemRequest  request)
         {
             return StatusCode(201,_configSystemService.Create(request));
@@ -42,6 +45,7 @@ namespace CourseWeb.api.AdminCp
 
         // PUT api/<ConfigSystemsController>/5
         [HttpPut("{configId}")]
+        [Authorize]
         public IActionResult Put(Guid configId, [FromBody] ConfigSystemRequest  request)
         {
             return Ok(_configSystemService.Update(configId, request));
@@ -49,11 +53,13 @@ namespace CourseWeb.api.AdminCp
 
         // DELETE api/<ConfigSystemsController>/5
         [HttpDelete("{configId}")]
+        [Authorize]
         public IActionResult  Delete(Guid configId)
         {
             return Ok(_configSystemService.Delete(configId));
         }
         [HttpGet("Paging")]
+        [Authorize]
         public IActionResult Paging(string searchAddress, int pageSize, int pageIndex, bool? status)
         {
             return Ok(_configSystemService.Paging(searchAddress,pageSize,pageIndex,status));

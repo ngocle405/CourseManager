@@ -1,5 +1,6 @@
 ﻿using CourseWeb.Core.Interfaces.Services;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,7 @@ namespace CourseWeb.api.AdminCp
 
         // POST api/<PayMentsController>
         [HttpPost]
+        [Authorize]
         public IActionResult Post(PaymentRequest request)
         {
             return StatusCode(201, _paymentService.Create(request));
@@ -43,6 +45,7 @@ namespace CourseWeb.api.AdminCp
 
         // PUT api/<PayMentsController>/5
         [HttpPut("{paymentId}")]
+        [Authorize]
         public IActionResult Put(Guid paymentId ,PaymentRequest request)
         {
             return Ok(_paymentService.Update(paymentId, request));
@@ -50,12 +53,14 @@ namespace CourseWeb.api.AdminCp
 
         // DELETE api/<PayMentsController>/5
         [HttpDelete("{paymentId}")]
+        [Authorize]
         public IActionResult  Delete(Guid paymentId)
         {
             return Ok(_paymentService.Delete(paymentId));
         }
 
         [HttpGet("Paging")]
+        [Authorize]
         public IActionResult Paging(string searchName, int pageSize, int pageIndex, bool? status, Guid? courseId)
         {
             return Ok(_paymentService.Paging(searchName, pageSize, pageIndex, status, courseId));

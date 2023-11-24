@@ -1,6 +1,7 @@
 ﻿using CourseWeb.Core.Interfaces.Services;
 using CourseWeb.Core.Models;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
@@ -32,6 +33,7 @@ namespace CourseWeb.Api.AdminCp
 
         // GET api/<NewCategoriesController>/5
         [HttpGet("{id}")]
+
         public IActionResult Get(Guid id)
         {
             return Ok(_newCategoryService.GetById(id));
@@ -39,6 +41,7 @@ namespace CourseWeb.Api.AdminCp
 
         // POST api/<NewCategoriesController>
         [HttpPost]
+        [Authorize]
         public IActionResult Post(NewCategoryRequest request)
         {
 
@@ -48,6 +51,7 @@ namespace CourseWeb.Api.AdminCp
 
         // PUT api/<NewCategoriesController>/5
         [HttpPut("{id}")]
+        [Authorize]
         public IActionResult Put(Guid id, NewCategoryRequest request)
         {
             var entities = _newCategoryService.Update(id, request);
@@ -56,12 +60,14 @@ namespace CourseWeb.Api.AdminCp
 
         // DELETE api/<NewCategoriesController>/5
         [HttpDelete("{id}")]
+        [Authorize]
         public IActionResult Delete(Guid id)
         {
             var entities = _newCategoryService.Delete(id);
             return Ok(entities);
         }
         [HttpGet("Paging")]
+        [Authorize]
         public IActionResult Paging(string searchName,string searchCode, int pageSize, int pageIndex, bool? status)
         {
             var entities = _newCategoryService.Paging(searchName,searchCode,pageSize,pageIndex, status);

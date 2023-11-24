@@ -1,6 +1,7 @@
 ﻿
 using CourseWeb.Core.Interfaces.Services;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -26,13 +27,15 @@ namespace CourseWeb.Api.AdminCp
             _env = env;
         }
         [HttpPost]
-       
+        [Authorize]
+
         public IActionResult Create(NewRequest newRequest)
         {
             var res= _newService.Create(newRequest);
             return StatusCode(201,res);
         }
         [HttpGet("Paging")]
+        [Authorize]
         public IActionResult Paging(string searchName, int pageSize, int pageIndex, bool? status, Guid? newCategoryId)
         {
             return Ok(_newService.Paging(searchName, pageSize, pageIndex, status,newCategoryId));
@@ -43,27 +46,32 @@ namespace CourseWeb.Api.AdminCp
             return Ok(_newService.GetAll());
         }
         [HttpDelete("{newId}")]
+        [Authorize]
         public IActionResult Delete(Guid newid)
         {
             return Ok(_newService.Delete(newid));
         }
         [HttpPut("{newId}")]
+        [Authorize]
         public IActionResult Update(Guid newId, NewRequest newRequest)
         {
             return Ok(_newService.Update(newId, newRequest));
         }
         [HttpGet("{newId}")]
+
         public IActionResult GetById(Guid newId)
         {
             return Ok(_newService.GetById(newId));
         }
         [HttpGet("export")]
+        [Authorize]
         public IActionResult ExportExcel()
         {
             var res = _newService.ExportExcel();
             return File(res, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
         }
         [HttpPost("UploadPhotos")]
+        [Authorize]
         public IActionResult UploadPhotos()
         {
 

@@ -2,6 +2,7 @@
 using CourseWeb.Core.Entities;
 using CourseWeb.Core.Models;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -79,6 +80,7 @@ namespace CourseWeb.api.AdminCp
 
         }
         [HttpGet]
+        [Authorize]
         public IActionResult Get()
         {
             return Ok(_courseManagerContext.Admins);
@@ -111,7 +113,8 @@ namespace CourseWeb.api.AdminCp
 
 
     // POST api/<ClassesController>
-    [HttpPost]
+        [HttpPost]
+        [Authorize]
         public IActionResult Post(Admin request)
         {
             request.Id =  Guid.NewGuid();
@@ -122,6 +125,7 @@ namespace CourseWeb.api.AdminCp
 
         // PUT api/<ClassesController>/5
         [HttpPut("{Id}")]
+        [Authorize]
         public IActionResult Put(Admin request)
         {
             var res = _courseManagerContext.Admins.Update(request);
@@ -129,6 +133,7 @@ namespace CourseWeb.api.AdminCp
             return Ok(res);
         }
         [HttpDelete("range")]
+        [Authorize]
         public IActionResult DeleteRange(List<Guid?> request)
         {
             var entitiesToDelete = _courseManagerContext.Admins.Where(e => request.Contains(e.Id));
@@ -137,6 +142,7 @@ namespace CourseWeb.api.AdminCp
             return Ok(entitiesToDelete);
         }
         [HttpPost("range")]
+        [Authorize]
         public IActionResult PostRange(List<Admin> request)
         {
             foreach (var item in request)
@@ -148,6 +154,7 @@ namespace CourseWeb.api.AdminCp
             return StatusCode(201,request);
         }
         [HttpPut("range")]
+        [Authorize]
         public IActionResult PutRange(List<Admin> request)
         {
             foreach (var item in request)

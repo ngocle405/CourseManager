@@ -1,6 +1,7 @@
 ﻿using CourseWeb.Core.Interfaces.Repositories;
 using CourseWeb.Core.Interfaces.Services;
 using CourseWeb.Core.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,7 @@ namespace CourseWeb.api.AdminCp
 
         // GET api/<ClassesController>/5
         [HttpGet("{ClassId}")]
+        [Authorize]
         public IActionResult Get(Guid ClassId)
         {
             return Ok(_classService.GetById(ClassId));
@@ -38,6 +40,7 @@ namespace CourseWeb.api.AdminCp
 
         // POST api/<ClassesController>
         [HttpPost]
+        [Authorize]
         public IActionResult Post(ClassRequest request)
         {
           
@@ -46,6 +49,7 @@ namespace CourseWeb.api.AdminCp
 
         // PUT api/<ClassesController>/5
         [HttpPut("{ClassId}")]
+        [Authorize]
         public IActionResult Put(Guid ClassId,ClassRequest request)
         {
             return Ok(_classService.Update(ClassId,request));
@@ -53,11 +57,13 @@ namespace CourseWeb.api.AdminCp
 
         // DELETE api/<ClassesController>/5
         [HttpDelete("{ClassId}")]
+        [Authorize]
         public IActionResult Delete(Guid ClassId)
         {
             return Ok(_classService.Delete(ClassId));
         }
         [HttpGet("Paging")]
+        [Authorize]
         public IActionResult Paging(string searchName, int pageSize, int pageIndex, bool? status)
         {
             return Ok(_classService.Paging( searchName,  pageSize,  pageIndex,   status));
